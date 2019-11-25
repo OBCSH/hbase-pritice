@@ -1,7 +1,6 @@
 package com.asiainfo.obsch.utils;
 
 import com.asiainfo.obsch.config.HbaseConfig;
-import com.asiainfo.obsch.utils.SpringContextHolder;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.*;
 import org.apache.hadoop.hbase.client.*;
