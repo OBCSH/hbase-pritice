@@ -14,11 +14,8 @@ import java.util.Map;
 @Configuration
 @ConfigurationProperties(prefix = HbaseConfig.CONF_PREFIX)
 public class HbaseConfig {
-
     public static final String CONF_PREFIX = "hbase.conf";
-
     private Map<String,String> confMaps;
-
     public Map<String, String> getconfMaps() {
         return confMaps;
     }
