@@ -1,0 +1,55 @@
+server:
+  #网关的默认端口是80
+  port: 80
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    # 应用的名字
+    name: tensquare-gateway
+  cloud:
+    gateway:
+      # 全局的CORS跨域请求配置处理
+      globalcors:
+        corsConfigurations:
+          # 哪些请求资源走下面的跨域规则，这里是所有
+          '[/**]':
+            #允许哪些域跨域访问，allowedOrigins: * # 这种写法或者下面的都可以，*表示全部
+            allowedOrigins:
+              - "http://docs.spring.io"
+            #允许哪些请求方法跨域
+            allowedMethods:
+              - GET
+      # 默认过滤器(全局有效)，对所有路由生效
+      default-filters:
+        ##响应头过滤器，对输出的响应设置其头部属性名称为X-Response-Default-MyName，值为itcast；
+        #如果有多个参数多则重写一行设置不同的参数
+        - AddResponseHeader=X-Response-Default-MyName,itcast
+      #配置路由规则
+      routes:
+        # 路由id，可以随意写
+        - id: base-service
+          # 代理的服务地址
+          # 配置具体要转发的url
+#          uri: http://localhost:9001
+          #代理的服务地址；lb表示从eureka中获取具体服务,后面的名字必须是Eureka中注册的服务的名字
+          uri: lb://tensquare-base
+          # 断言规则
+          predicates:
+            # 路径规则，默认会将路径地址拼到代理服务地址上去请求代理的服务
+#            - Path=/label/**
+#            - Path=/**
+            - Path=/base/label/**
+          # 过滤器
+          filters:
+            # 添加请求路径的前缀,转发到具体微服务的时候，自动加上该前置，访问时不要写
+#            - PrefixPath=/label
+            #表示过滤1个路径，2表示两个路径，以此类推。即转发时会去掉某段路径，访问还需要有。
+            - StripPrefix=1
+            - AddResponseHeader=X-Response-Default-MyName2,itcast2
+            # 自定义过滤器,自定义过滤器的命名应该为：***GatewayFilterFactory
+            - MyParam=username

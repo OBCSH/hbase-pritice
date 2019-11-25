@@ -1,5 +1,0 @@
-#hbaseÅäÖÃ£¬¶Ë¿ÚÄ¬ÈÏ2181£¬
-hbase:
-  conf:
-  confMaps:
-    'hbase.zookeeper.quorum' : 'hadoop-master:2181'
