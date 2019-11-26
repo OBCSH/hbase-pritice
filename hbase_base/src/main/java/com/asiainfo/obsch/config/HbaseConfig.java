@@ -1,10 +1,14 @@
 package com.asiainfo.obsch.config;
 
+import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Hbase配置类
@@ -12,16 +16,23 @@ import java.util.Map;
  * @Date 2019年11月26日
  *
  */
+
+
 @Configuration
-//@ConfigurationProperties(prefix = HbaseConfig.CONF_PREFIX)
+@EnableConfigurationProperties(HbaseProperties.class)
 @PropertySource("classpath:bootstrap.yml")
 public class HbaseConfig {
-    public static final String CONF_PREFIX = "hbase.conf";
-    private Map<String,String> confMaps;
-    public Map<String, String> getconfMaps() {
-        return confMaps;
+private final HbaseProperties properties;
+    public HbaseConfig(HbaseProperties properties) {
+        this.properties = properties;
     }
-    public void setconfMaps(Map<String, String> confMaps) {
-        this.confMaps = confMaps;
+    public org.apache.hadoop.conf.Configuration configuration() {
+        org.apache.hadoop.conf.Configuration configuration = HBaseConfiguration.create();
+        Map<String, String> config = properties.getConfig();
+        Set<String> keySet = config.keySet();
+        for (String key : keySet) {
+            configuration.set(key, config.get(key));
+        }
+        return configuration;
     }
 }
