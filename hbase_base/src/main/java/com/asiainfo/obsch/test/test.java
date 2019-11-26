@@ -16,11 +16,11 @@ public class test {
     private HBaseUtils hBaseUtils;
 
     @RequestMapping(value = "/test")
-    public Map<String,Object> test() {
+    public Map<String,Object> test(String tablename) {
         String str;
         str = null;
         try {
-            str = hBaseUtils.scanAllRecord("sixmonth");//扫描表
+            str = hBaseUtils.scanAllRecord(tablename);//扫描表
             System.out.println("获取到hbase的内容："+str);
         } catch (IOException e) {
             e.printStackTrace();

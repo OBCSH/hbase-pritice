@@ -12,7 +12,7 @@ public class ScanTable{
 
 
     private static Configuration conf = HBaseConfiguration.create();
-    public static void main(String tablename) throws IOException {
+    public static void main(String tablename,String columnFamilys,String column) throws IOException {
 
 
         Connection connection = ConnectionFactory.createConnection(conf);
@@ -21,8 +21,8 @@ public class ScanTable{
         Scan scan = new Scan();
 
 
-        scan.addColumn(Bytes.toBytes("personal"), Bytes.toBytes("name"));
-        scan.addColumn(Bytes.toBytes("personal"), Bytes.toBytes("city"));
+        scan.addColumn(Bytes.toBytes(columnFamilys), Bytes.toBytes(column));
+//        scan.addColumn(Bytes.toBytes(columnFamilys), Bytes.toBytes("city"));
 
 
         ResultScanner scanner = table.getScanner(scan);

@@ -28,7 +28,6 @@ public class HBaseServicePermission {
         }
         Connection connection = ConnectionFactory.createConnection(conf);
         Table table = connection.getTable(TableName.valueOf(tableName));
-//        HTable table = new HTable(configuration, Bytes.toBytes(tableName));
         TableName tableName1 = table.getName();
         AccessControlClient.grant((Connection) configuration, tableName1, userName, Bytes.toBytes(family), Bytes.toBytes(qual), actions);
         if (logger.isInfoEnabled()) {

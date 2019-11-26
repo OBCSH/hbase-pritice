@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "hbase.conf.hbase.zookeeper.quorum",
+      "type": "java.lang.String",
+      "description": "Description for hbase.conf.hbase.zookeeper.quorum."
+  }
+] }
