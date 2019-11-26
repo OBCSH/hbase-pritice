@@ -265,7 +265,7 @@ public class HBaseUtils {
         ResultScanner scanner = table.getScanner(scan);
         try {
             for (Result result : scanner) {
-                //TODO 此处根据业务来自定义实现
+
                 list.add(null);
             }
         } finally {
@@ -298,7 +298,7 @@ public class HBaseUtils {
         ResultScanner scanner = table.getScanner(scan);
         try {
             for (Result result : scanner) {
-                //TODO 此处根据业务来自定义实现
+
                 list.add(null);
             }
         } finally {
@@ -346,6 +346,7 @@ public class HBaseUtils {
         stopWatch.start();
 
         Scan scan = new Scan();
+
         AggregationClient aggregationClient = new AggregationClient(conf);
 
         Long count = aggregationClient.rowCount(name, new LongColumnInterpreter(), scan);
