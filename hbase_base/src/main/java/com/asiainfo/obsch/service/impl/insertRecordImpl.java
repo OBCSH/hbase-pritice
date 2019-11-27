@@ -9,9 +9,12 @@ import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.client.Table;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
+
+@Service("insertRecord")
 public class insertRecordImpl implements insertRecord {
     @Autowired
     HbaseConfig config;

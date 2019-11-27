@@ -9,9 +9,13 @@ import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.client.Table;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
+
+
+@Service("selectValue")
 public class selectValueImpl implements selectValue {
     @Autowired
     HbaseConfig config;

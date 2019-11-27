@@ -1,0 +1,40 @@
+server:
+  #默认配置中心的端口是8888
+  port: 8888
+eureka:
+  client:
+    #Eureka服务的地址
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    #用于表示在猜测主机名时，服务器的IP地址应该与操作系统报告的主机名相对应。(注册服务和客户端如果在一台机器上则无需配置)
+    prefer-ip-address: true
+spring:
+  application:
+    name: HbaseService-config #服务名
+  cloud:
+    config:
+      server:
+        #Git远程仓库配置
+        git:
+          # 仓库地址
+          uri: https://gitee.com/zhangdaxian2019/HbaseService-config.git
+          # 连接git的账号
+          #username: xxx
+          # 连接git的米面
+          #password: xxx
+        # 路径前缀的添加，默认为空
+        #prefix: myconfig
+  #MQ配置
+  rabbitmq:
+    host: 192.168.40.141
+    #port: 5672
+    #username: guest
+    #password: guest
+#暴露触发消息总线的地址
+management:
+  endpoints:
+    web:
+      exposure:
+        # 暴露触发消息总线的地址
+        include: bus-refresh

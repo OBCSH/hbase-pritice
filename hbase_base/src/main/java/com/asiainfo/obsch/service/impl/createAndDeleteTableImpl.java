@@ -8,9 +8,12 @@ import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
+
+@Service("createAndDeleteTable")
 public class createAndDeleteTableImpl implements createAndDeleteTable {
     @Autowired
     HbaseConfig config;

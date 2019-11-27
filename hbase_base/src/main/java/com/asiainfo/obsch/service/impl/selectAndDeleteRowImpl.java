@@ -7,10 +7,13 @@ import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.NavigableMap;
 
+
+@Service("selectAndDeleteRow")
 public class selectAndDeleteRowImpl implements selectAndDeleteRow {
 
     @Autowired

@@ -8,11 +8,13 @@ import org.apache.hadoop.hbase.filter.CompareFilter;
 import org.apache.hadoop.hbase.filter.RowFilter;
 import org.apache.hadoop.hbase.filter.SubstringComparator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service("scanReportDataByRowKeyword")
 public class scanReportDataByRowKeywordImpl implements scanReportDataByRowKeyword {
     @Autowired
     HbaseConfig config;

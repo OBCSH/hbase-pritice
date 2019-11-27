@@ -22,3 +22,9 @@ spring:
         enabled: true
         #在Eureka中注册的配置中心服务端的名字
         service-id: HbaseService-config
+hbase:
+  config:
+    hbase.zookeeper.quorum: 127.0.0.1
+    hbase.zookeeper.port: 2181
+
+

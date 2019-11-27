@@ -16,11 +16,21 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hbase_base" target="6" />
-      <module name="hbase_common" target="1.5" />
-      <module name="hbase_config" target="1.5" />
-      <module name="hbase_eureka" target="1.5" />
-      <module name="hbase_gateway" target="1.5" />
-      <module name="hbase_parent" target="1.5" />
+      <module name="hbase_common" target="1.8" />
+      <module name="hbase_config" target="1.8" />
+      <module name="hbase_eureka" target="1.8" />
+      <module name="hbase_gateway" target="1.8" />
+      <module name="hbase_parent" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hbase_base" options="-parameters" />
+      <module name="hbase_common" options="-parameters" />
+      <module name="hbase_config" options="-parameters" />
+      <module name="hbase_eureka" options="-parameters" />
+      <module name="hbase_gateway" options="-parameters" />
+      <module name="hbase_parent" options="-parameters" />
+    </option>
   </component>
 </project>

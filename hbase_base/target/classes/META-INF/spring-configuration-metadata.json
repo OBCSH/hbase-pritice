@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "hbase",
+      "type": "com.asiainfo.obsch.config.HbaseProperties",
+      "sourceType": "com.asiainfo.obsch.config.HbaseProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "hbase.conf.hbase.zookeeper.property.clientPort",
+      "type": "java.lang.String",
+      "description": "Description for hbase.conf.hbase.zookeeper.property.clientPort."
+    },
+    {
+      "name": "hbase.conf.hbase.zookeeper.quorum",
+      "type": "java.lang.String",
+      "description": "Description for hbase.conf.hbase.zookeeper.quorum."
+    },
+    {
+      "name": "hbase.config",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "com.asiainfo.obsch.config.HbaseProperties"
+    }
+  ],
+  "hints": []
+}

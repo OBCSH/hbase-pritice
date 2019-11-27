@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="hbase_eureka:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/hbase_eureka_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="hbase_eureka/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="hbase_eureka" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -8,9 +8,13 @@ import org.apache.hadoop.hbase.client.Delete;
 import org.apache.hadoop.hbase.client.Table;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
+
+
+@Service("deleteColumnAndColumnFamily")
 public class deleteColumnAndColumnFamilyImpl implements deleteColumnAndColumnFamily {
     @Autowired
     HbaseConfig config;

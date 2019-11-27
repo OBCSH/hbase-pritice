@@ -1,7 +1,8 @@
 package com.asiainfo.obsch.service.impl;
 
 import com.asiainfo.obsch.config.HbaseConfig;
-import com.asiainfo.obsch.service.countRowsWithCoprocessor;
+import com.asiainfo.obsch.service.CountRowsWithCoprocessor;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.HTableDescriptor;
@@ -11,9 +12,11 @@ import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.client.coprocessor.AggregationClient;
 import org.apache.hadoop.hbase.client.coprocessor.LongColumnInterpreter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.util.StopWatch;
 
-public class countRowsWithCoprocessorImpl implements countRowsWithCoprocessor {
+@Service("countRowsWithCoprocessor")
+public class countRowsWithCoprocessorImpl implements CountRowsWithCoprocessor {
     @Autowired
     HbaseConfig config;
     private static Configuration conf = HBaseConfiguration.create();
