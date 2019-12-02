@@ -12,7 +12,7 @@ import java.io.IOException;
 @RequestMapping("/table")
 public class CreateAndDeleteTableControl {
 
-    @Resource(name="CreateAndDeleteTable")
+    @Resource(name="createAndDeleteTable")
     CreateAndDeleteTable createAndDeleteTable;
 
     @RequestMapping("/createTable")

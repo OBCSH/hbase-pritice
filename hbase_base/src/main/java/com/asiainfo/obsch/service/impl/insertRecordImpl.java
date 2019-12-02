@@ -1,8 +1,7 @@
 package com.asiainfo.obsch.service.impl;
 
 import com.asiainfo.obsch.config.HbaseConfig;
-import com.asiainfo.obsch.service.insertRecord;
-
+import com.asiainfo.obsch.service.InsertRecord;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Connection;
 import org.apache.hadoop.hbase.client.Put;
@@ -14,8 +13,8 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 
 
-@Service("insertRecord")
-public class insertRecordImpl implements insertRecord {
+@Service("insertReord")
+public class insertRecordImpl implements InsertRecord {
     @Autowired
     HbaseConfig config;
     private static Connection connection = null;

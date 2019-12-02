@@ -1,7 +1,7 @@
 package com.asiainfo.obsch.service.impl;
 
 import com.asiainfo.obsch.config.HbaseConfig;
-import com.asiainfo.obsch.service.scanReportDataByRowKeyword;
+import com.asiainfo.obsch.service.ScanReportDataByRowKeyword;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.filter.CompareFilter;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service("scanReportDataByRowKeyword")
-public class scanReportDataByRowKeywordImpl implements scanReportDataByRowKeyword {
+public class scanReportDataByRowKeywordImpl implements ScanReportDataByRowKeyword {
     @Autowired
     HbaseConfig config;
     private static Connection connection = null;

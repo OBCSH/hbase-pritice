@@ -10,7 +10,7 @@ import java.io.IOException;
 @Controller
 @RequestMapping("/Column")
 public class DeleteColumnAndColumnFamilyControl {
-    @Resource(name = "deleteColumnAndColumnFamily")
+    @Resource(name="deleteColumnAndColumnFamily")
     DeleteColumnAndColumnFamily deleteColumnAndColumnFamily;
     @RequestMapping("/deleteColumn")
     public void deleteColumn(String tablename, String rowkey, String columnFamily, String column) throws IOException {

@@ -18,7 +18,7 @@ spring:
         #Git远程仓库配置
         git:
           # 仓库地址
-          uri: https://gitee.com/bobolaoshi/tensquare-config-075.git
+          uri: https://gitee.com/zhangdaxian2019/HbaseService-config.git
           # 连接git的账号
           #username: xxx
           # 连接git的米面
@@ -27,10 +27,10 @@ spring:
         #prefix: myconfig
   #MQ配置
   rabbitmq:
-    host: 192.168.40.141
-    #port: 5672
-    #username: guest
-    #password: guest
+    host: 192.168.80.128
+    port: 5672
+    username: guest
+    password: guest
 #暴露触发消息总线的地址
 management:
   endpoints:

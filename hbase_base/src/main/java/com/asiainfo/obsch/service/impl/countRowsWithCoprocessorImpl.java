@@ -2,7 +2,6 @@ package com.asiainfo.obsch.service.impl;
 
 import com.asiainfo.obsch.config.HbaseConfig;
 import com.asiainfo.obsch.service.CountRowsWithCoprocessor;
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.HTableDescriptor;

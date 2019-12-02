@@ -1,8 +1,7 @@
 package com.asiainfo.obsch.service.impl;
 
 import com.asiainfo.obsch.config.HbaseConfig;
-import com.asiainfo.obsch.service.createAndDeleteTable;
-
+import com.asiainfo.obsch.service.CreateAndDeleteTable;
 import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.TableName;
@@ -14,7 +13,7 @@ import java.io.IOException;
 
 
 @Service("createAndDeleteTable")
-public class createAndDeleteTableImpl implements createAndDeleteTable {
+public class createAndDeleteTableImpl implements CreateAndDeleteTable {
     @Autowired
     HbaseConfig config;
     private static Admin admin = null;

@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 @Controller
 @RequestMapping("/Permission")
 public class HBaseServicePermissionControl {
-    @Resource(name = "hBaseServicePermission")
+    @Resource(name = "HBaseServicePermission")
     HBaseServicePermission hBaseServicePermission;
 
     @RequestMapping("/grant")

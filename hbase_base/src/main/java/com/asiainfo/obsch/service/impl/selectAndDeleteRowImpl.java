@@ -1,7 +1,7 @@
 package com.asiainfo.obsch.service.impl;
 
 import com.asiainfo.obsch.config.HbaseConfig;
-import com.asiainfo.obsch.service.selectAndDeleteRow;
+import com.asiainfo.obsch.service.SelectAndDeleteRow;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.util.NavigableMap;
 
 
-@Service("selectAndDeleteRow")
-public class selectAndDeleteRowImpl implements selectAndDeleteRow {
+@Service("selectAndDeletRow")
+public class selectAndDeleteRowImpl implements SelectAndDeleteRow {
 
     @Autowired
     HbaseConfig config;

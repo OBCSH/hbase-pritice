@@ -1,7 +1,7 @@
 package com.asiainfo.obsch.service.impl;
 
 import com.asiainfo.obsch.config.HbaseConfig;
-import com.asiainfo.obsch.service.selectValue;
+import com.asiainfo.obsch.service.SelectValue;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Connection;
 import org.apache.hadoop.hbase.client.Get;
@@ -14,9 +14,8 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 
 
-
-@Service("selectValue")
-public class selectValueImpl implements selectValue {
+@Service("selectVlue")
+public class selectValueImpl implements SelectValue {
     @Autowired
     HbaseConfig config;
 
